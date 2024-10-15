@@ -1,4 +1,3 @@
-# nss_phc_frontend
 # Primary Health Center Project
 
 **Note:** Refer to the below command line for Smooth Work Flow (For Developers)

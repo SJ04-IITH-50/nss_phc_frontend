@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nss_phc_frontend/static/css/main.37e2c3a5.css",
-    "main.js": "/nss_phc_frontend/static/js/main.b6095d60.js",
+    "main.css": "/nss_phc_frontend/static/css/main.565cb294.css",
+    "main.js": "/nss_phc_frontend/static/js/main.99ff989d.js",
     "static/js/453.0ce7e3fe.chunk.js": "/nss_phc_frontend/static/js/453.0ce7e3fe.chunk.js",
     "static/media/nss_logo.png": "/nss_phc_frontend/static/media/nss_logo.379776288a9fa3ab17d8.png",
     "service-worker.js": "/nss_phc_frontend/service-worker.js",
     "index.html": "/nss_phc_frontend/index.html",
-    "main.37e2c3a5.css.map": "/nss_phc_frontend/static/css/main.37e2c3a5.css.map",
-    "main.b6095d60.js.map": "/nss_phc_frontend/static/js/main.b6095d60.js.map",
+    "main.565cb294.css.map": "/nss_phc_frontend/static/css/main.565cb294.css.map",
+    "main.99ff989d.js.map": "/nss_phc_frontend/static/js/main.99ff989d.js.map",
     "453.0ce7e3fe.chunk.js.map": "/nss_phc_frontend/static/js/453.0ce7e3fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37e2c3a5.css",
-    "static/js/main.b6095d60.js"
+    "static/css/main.565cb294.css",
+    "static/js/main.99ff989d.js"
   ]
 }

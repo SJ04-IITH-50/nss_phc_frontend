@@ -1,16 +1,21 @@
-import React from 'react';
-import './App.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './Components/LoginPage';
+import React from "react";
+import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import LoginPage from "./Components/LoginPage";
+import Home from "./Pages/Home";
+import { UserProvider } from "./context/userContext";
 
-const App=()=>{
-  return(
-    <Router>
-      <Routes>
-        <Route path='/' element={<LoginPage />} />
-      </Routes>
-    </Router>
-  )
-}
+const router = createBrowserRouter([
+  { path: "/", element: <LoginPage /> },
+  { path: "/home", element: <Home /> },
+]);
+
+const App = () => {
+  return (
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
+  );
+};
 
 export default App;

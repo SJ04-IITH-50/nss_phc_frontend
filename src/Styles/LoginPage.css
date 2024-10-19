@@ -22,7 +22,7 @@ html{
 .title-flex{
   display: flex;
   margin-top: 4dvh;
-  font-size: 0.8rem;
+  font-size: 1.7rem;
   align-items: center;
   justify-content: center;
   height: 11dvh;
@@ -61,7 +61,7 @@ html{
 }
 
 .form-group input{
-  height: 1.85rem;
+  height: 1.9rem;
   font-size: 1.15rem;
   width: 95%;
   padding: 0.5rem;

@@ -14,8 +14,6 @@ html{
 }
 
 .login-container{
-  height: 100dvh;
-  width: 100%;
   text-align: center;
 }
 
@@ -45,7 +43,7 @@ html{
 .login-form{
   border: 0.1rem solid #14ae5c;
   border-radius: 0.5rem;
-  width: 65vw;
+  width: 70vw;
   padding: 2.4rem 1.9rem;
 }
 
@@ -61,7 +59,7 @@ html{
 }
 
 .form-group input{
-  height: 1.9rem;
+  height: 2.1rem;
   font-size: 1.15rem;
   width: 95%;
   padding: 0.5rem;
@@ -78,12 +76,21 @@ html{
 .login-button{
   background-color: #14ae5c;
   color: white;
-  padding: 1rem 1.3rem;
+  padding: 0.9rem 1.2rem;
   font-size: 1.15rem;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
   width: 100%;
+  transition: opacity 0.3;
+}
+
+.login-button:hover{
+  opacity: 0.9;
+}
+
+.login-button:active{
+  opacity: 0.75;
 }
 
 .forgot-password{

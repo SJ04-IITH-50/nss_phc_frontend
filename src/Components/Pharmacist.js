@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import '../Styles/Pharmacist.css';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import io from "socket.io-client";
@@ -60,60 +61,62 @@ const Pharmacist = () => {
   };
 
   return (
-    <div className="prescription-list p-4">
-      <h2 className="text-2xl font-bold mb-4">
-        Welcome, Pharmacist! Here are the latest prescriptions:
-      </h2>
-      {error && <p className="error">{error}</p>}
-
-      <h3 className="text-xl font-bold mb-4">Pending Prescriptions</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {prescriptions.length === 0 ? (
-          <p>No pending prescriptions available.</p>
-        ) : (
-          prescriptions.map((prescription, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-lg p-4 border border-gray-200 cursor-pointer"
-              onClick={() => handlePrescriptionClick(prescription.id)}
-            >
-              <h3 className="text-xl font-semibold text-gray-800">
-                {prescription.name}
-              </h3>
-              <p className="text-gray-600">Age: {prescription.age}</p>
-              <p className="text-gray-600">Gender: {prescription.gender}</p>
-              <p className="text-gray-600">OPID: {prescription.OPid}</p>
-              <p className="text-gray-600">
-                Medicines: {prescription.medicines_prescribed}
-              </p>
-            </div>
-          ))
-        )}
+    <div className="pharmacist-container">
+      <div className="title-flex">
+        <h1>Home Page</h1>
       </div>
 
-      <h3 className="text-xl font-bold mb-4 mt-6">Medicines Done Patients</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {donePrescriptions.length === 0 ? (
-          <p>No patients have completed their prescriptions yet.</p>
-        ) : (
-          donePrescriptions.map((prescription, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-lg p-4 border border-gray-200"
-            >
-              <h3 className="text-xl font-semibold text-gray-800">
-                {prescription.name}
-              </h3>
-              <p className="text-gray-600">Age: {prescription.age}</p>
-              <p className="text-gray-600">Gender: {prescription.gender}</p>
-              <p className="text-gray-600">OPID: {prescription.OPid}</p>
-              <p className="text-gray-600">
-                Medicines: {prescription.medicines_prescribed}
-              </p>
-            </div>
-          ))
-        )}
+      <div className="content-flex">
+        <h2 className="welcome-title">Welcome, Pharmacist!</h2>
+        {error && <p className="error-message">{error}</p>}
+        <div className="prescription-section">
+          <h2 className="section-title">Pending Prescriptions</h2>
+          <div className="prescriptions">
+            {prescriptions.length === 0 ? (
+              <p className="message">No pending prescriptions available.</p>
+            ) : (
+              prescriptions.map((prescription, index) => (
+                <div
+                  key={index}
+                  className="prescription-card"
+                  onClick={() => handlePrescriptionClick(prescription.id)}
+                >
+                  <h3 className="prescription-name">{prescription.name}</h3>
+                  <p className="prescription-details">Age: {prescription.age}</p>
+                  <p className="prescription-details">Gender: {prescription.gender}</p>
+                  <p className="prescription-details">OPID: {prescription.opid}</p>
+                  <p className="prescription-details">
+                    Medicines: {prescription.medicines_prescribed}
+                  </p>
+                </div>
+              ))
+            )}
+          </div>
+
+          <h2 className="section-title">Medicines Done Patients</h2>
+          <div className="prescriptions">
+            {donePrescriptions.length === 0 ? (
+              <p className="message">No patients have completed their prescriptions yet.</p>
+            ) : (
+              donePrescriptions.map((prescription, index) => (
+                <div key={index} className="prescription-card">
+                  <h3 className="prescription-name">{prescription.name}</h3>
+                  <p className="prescription-details">Age: {prescription.age}</p>
+                  <p className="prescription-details">Gender: {prescription.gender}</p>
+                  <p className="prescription-details">OPID: {prescription.opid}</p>
+                  <p className="prescription-details">
+                    Medicines: {prescription.medicines_prescribed}
+                  </p>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
       </div>
+
+      <footer className="footer">
+        <p>Copyright© 2024</p>
+      </footer>
     </div>
   );
 };

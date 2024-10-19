@@ -49,7 +49,7 @@ const PatientPage = () => {
         { complaint: finalComplaint, medicines },
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `${token}`,
           },
         }
       );

@@ -1,4 +1,7 @@
 .doctor-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -8,6 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  flex: 1;
 }
 
 .welcome-title{
@@ -42,7 +46,7 @@
   padding: 1rem;
   cursor: pointer;
   transition: box-shadow 0.3s;
-  margin-bottom: 1vh;
+  margin-bottom: 1.3vh;
 }
 
 .patient-card:hover{
@@ -66,12 +70,4 @@
   color: red;
   font-size: 0.9rem;
   margin-bottom: 1rem;
-}
-
-.footer{
-  position: absolute;
-  border-top: 0.1rem solid #14ae5c;
-  padding-top: 0.9rem;
-  bottom: 1.7rem;
-  width: 100%;
 }

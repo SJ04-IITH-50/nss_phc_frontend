@@ -123,6 +123,8 @@ const AddPatientForm = () => {
                 name="aadhar_number"
                 value={formData.aadhar_number}
                 onChange={handleChange}
+                minLength="12"
+                maxLength="12"
                 required
               />
             </div>

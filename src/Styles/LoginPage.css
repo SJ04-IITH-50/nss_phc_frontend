@@ -14,6 +14,9 @@ html{
 }
 
 .login-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -38,6 +41,7 @@ html{
   justify-content: center;
   align-items: center;
   height: 70dvh;
+  flex: 1;
 }
 
 .login-form{
@@ -81,7 +85,7 @@ html{
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   transition: opacity 0.3;
 }
 
@@ -101,12 +105,4 @@ html{
 .forgot-password a{
   color: #007bff;
   text-decoration: none;
-}
-
-.footer{
-  position: absolute;
-  border-top: 0.1rem solid #14ae5c;
-  padding-top: 0.9rem;
-  bottom: 1.7rem;
-  width: 100%;
 }

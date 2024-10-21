@@ -1,5 +1,27 @@
 .receptionist-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.title-flex{
+  display: flex;
+  margin-top: 2vh;
+  font-size: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  border-bottom: 0.1rem solid #14ae5c;
+}
+
+.form-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 2vh 0;
 }
 
 .form-title{
@@ -13,6 +35,8 @@
   border-radius: 0.5rem;
   width: 70vw;
   padding: 2.4rem 1.9rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .add-patient-form div{
@@ -21,15 +45,15 @@
 
 .add-patient-form label{
   display: block;
-  margin-bottom: 0.4rem;
-  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
   text-align: left;
 }
 
 .add-patient-form input,
 .add-patient-form select{
-  height: 2.1rem;
-  font-size: 1.15rem;
+  height: 1.7rem;
+  font-size: 0.95rem;
   width: 95%;
   padding: 0.5rem;
   border: 0.1rem solid #cccccc;
@@ -44,7 +68,7 @@
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
   transition: opacity 0.3s;
 }
 

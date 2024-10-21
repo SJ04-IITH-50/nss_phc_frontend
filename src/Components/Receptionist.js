@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../Styles/Receptionist.css';
 import axios from "axios";
 
 const AddPatientForm = () => {
@@ -60,67 +61,81 @@ const AddPatientForm = () => {
   };
 
   return (
-    <div>
-      <h2>Add Patient</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+    <div className="receptionist-container">
+      <div className="title-flex">
+        <h1>Home Page</h1>
+      </div>
+
+      <div className="form-flex">
+        <div className="add-patient-form">
+          <h2 className="form-title">Add Patient</h2>
+          {error && <p className="error-message">{error}</p>}
+          {success && <p className="success-message">{success}</p>}
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>OP ID:</label>
+              <input
+                type="text"
+                name="OPid"
+                value={formData.OPid}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Age:</label>
+              <input
+                type="number"
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Gender:</label>
+              <select
+                name="gender"
+                value={formData.gender}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="PNS">PNS</option>
+              </select>
+            </div>
+            <div>
+              <label>Aadhar Number:</label>
+              <input
+                type="text"
+                name="aadhar_number"
+                value={formData.aadhar_number}
+                onChange={handleChange}
+                minLength="12"
+                maxLength="12"
+                required
+              />
+            </div>
+            <button type="submit" className="add-patient-button">Add Patient</button>
+          </form>
         </div>
-        <div>
-          <label>OP ID:</label>
-          <input
-            type="text"
-            name="OPid"
-            value={formData.OPid}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Age:</label>
-          <input
-            type="number"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Gender:</label>
-          <select
-            name="gender"
-            value={formData.gender}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="PNS">PNS</option>
-          </select>
-        </div>
-        <div>
-          <label>Aadhar Number:</label>
-          <input
-            type="text"
-            name="aadhar_number"
-            value={formData.aadhar_number}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Add Patient</button>
-      </form>
+      </div>
+
+      <footer className="footer">
+        <p>Copyright© 2024</p>
+      </footer>
     </div>
   );
 };

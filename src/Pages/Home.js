@@ -2,7 +2,7 @@ import React from "react";
 import { useUser } from "../context/userContext";
 import Doctor from "../Components/Doctor";
 import Receptionist from "../Components/Receptionist";
-import Pharmacist from "../Components/Pharmicist";
+import Pharmacist from "../Components/Pharmacist";
 const Home = () => {
   const { user } = useUser();
 
@@ -21,7 +21,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Home Page</h1>
       {renderContentBasedOnRole()}
     </div>
   );

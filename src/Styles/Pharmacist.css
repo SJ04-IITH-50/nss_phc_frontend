@@ -1,0 +1,59 @@
+html,body{
+  height: 100%;
+  margin: 0;
+}
+
+.pharmacist-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.prescription-section{
+  width: 80%;
+}
+
+.prescriptions{
+  margin-bottom: 2rem;
+}
+
+.prescription-card{
+  background-color: white;
+  border: 0.1rem solid #cccccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin-bottom: 1.3vh;
+}
+
+.prescription-card:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prescription-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #14ae5c;
+  margin-bottom: 0.5rem;
+}
+
+.prescription-details{
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.error-message{
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.footer{
+  border-top: 0.1rem solid #14ae5c;
+  padding-top: 1.3rem;
+  width: 100%;
+  margin-bottom: 1.7rem;
+}

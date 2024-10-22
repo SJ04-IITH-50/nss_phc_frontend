@@ -1,19 +1,4 @@
-html{
-  font-size: 14px;
-}
-
-@media (min-width: 480px){
-  html{
-    font-size: 16px;
-  }
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.login-container{
+.receptionist-container{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,62 +7,60 @@ html{
 
 .title-flex{
   display: flex;
-  margin-top: 4dvh;
+  margin-top: 2vh;
   font-size: 1.7rem;
   align-items: center;
   justify-content: center;
-  height: 11dvh;
+  height: 10vh;
   width: 100%;
-  border-top: 0.1rem solid #14ae5c;
   border-bottom: 0.1rem solid #14ae5c;
-}
-
-.title-flex h1{
-  font-weight: 500;
 }
 
 .form-flex{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70dvh;
   flex: 1;
+  padding: 2vh 0;
 }
 
-.login-form{
+.form-title{
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+
+.add-patient-form{
   border: 0.1rem solid #14ae5c;
   border-radius: 0.5rem;
   width: 70vw;
   padding: 2.4rem 1.9rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group{
+.add-patient-form div{
   margin-bottom: 1rem;
 }
 
-.form-group label{
+.add-patient-form label{
   display: block;
-  margin-bottom: 0.4rem;
-  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
   text-align: left;
 }
 
-.form-group input{
-  height: 2.1rem;
-  font-size: 1.15rem;
+.add-patient-form input,
+.add-patient-form select{
+  height: 1.7rem;
+  font-size: 0.95rem;
   width: 95%;
   padding: 0.5rem;
   border: 0.1rem solid #cccccc;
   border-radius: 0.4rem;
-  margin-bottom: 0.4rem;
 }
 
-.error{
-  color: red;
-  font-size: 0.8rem;
-}
-
-.login-button{
+.add-patient-button{
   background-color: #14ae5c;
   color: white;
   padding: 0.9rem 1.2rem;
@@ -85,24 +68,24 @@ html{
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  width: 90%;
-  transition: opacity 0.3;
+  width: 95%;
+  transition: opacity 0.3s;
 }
 
-.login-button:hover{
+.add-patient-button:hover{
   opacity: 0.9;
 }
 
-.login-button:active{
+.add-patient-button:active{
   opacity: 0.75;
 }
 
-.forgot-password{
-  font-size: 1.05rem;
-  margin-top: 0.9rem;
+.success-message{
+  color: green;
+  font-size: 1rem;
 }
 
-.forgot-password a{
-  color: #007bff;
-  text-decoration: none;
+.error-message{
+  color: red;
+  font-size: 1rem;
 }

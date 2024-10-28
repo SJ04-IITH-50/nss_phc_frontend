@@ -5,7 +5,6 @@ import axios from "axios";
 const AddPatientForm = () => {
   const [formData, setFormData] = useState({
     name: "",
-    OPid: "",
     age: "",
     gender: "",
     aadhar_number: "",
@@ -42,7 +41,6 @@ const AddPatientForm = () => {
       setSuccess(response.data.message);
       setFormData({
         name: "",
-        OPid: "",
         age: "",
         gender: "",
         aadhar_number: "",
@@ -78,16 +76,6 @@ const AddPatientForm = () => {
                 type="text"
                 name="name"
                 value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div>
-              <label>OP ID:</label>
-              <input
-                type="text"
-                name="OPid"
-                value={formData.OPid}
                 onChange={handleChange}
                 required
               />

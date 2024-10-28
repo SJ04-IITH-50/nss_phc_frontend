@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../Styles/Pharmacist.css';
+import "../Styles/Pharmacist.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import io from "socket.io-client";
@@ -13,11 +13,16 @@ const Pharmacist = () => {
   useEffect(() => {
     const socket = io("http://localhost:8001");
 
+    // Listen for updated prescription events
     socket.on("updatedPrescription", (updatedPrescription) => {
-      setPrescriptions((prevPrescriptions) => [
-        updatedPrescription,
-        ...prevPrescriptions,
-      ]);
+      if (updatedPrescription.medicines_done) {
+        setDonePrescriptions((prev) => [updatedPrescription, ...prev]);
+        setPrescriptions((prev) =>
+          prev.filter((p) => p.id !== updatedPrescription.id)
+        );
+      } else {
+        setPrescriptions((prev) => [updatedPrescription, ...prev]);
+      }
     });
 
     return () => {

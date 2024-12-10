@@ -1,26 +1,26 @@
-html{
+html {
   font-size: 14px;
 }
 
-@media (min-width: 480px){
-  html{
+@media (min-width: 480px) {
+  html {
     font-size: 16px;
   }
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.login-container{
+.login-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.title-flex{
+.title-flex {
   display: flex;
   margin-top: 4dvh;
   font-size: 1.7rem;
@@ -32,11 +32,11 @@ html{
   border-bottom: 0.1rem solid #14ae5c;
 }
 
-.title-flex h1{
+.title-flex h1 {
   font-weight: 500;
 }
 
-.form-flex{
+.form-flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,25 +44,25 @@ html{
   flex: 1;
 }
 
-.login-form{
+.login-form {
   border: 0.1rem solid #14ae5c;
   border-radius: 0.5rem;
   width: 70vw;
   padding: 2.4rem 1.9rem;
 }
 
-.form-group{
+.form-group {
   margin-bottom: 1rem;
 }
 
-.form-group label{
+.form-group label {
   display: block;
   margin-bottom: 0.4rem;
   font-size: 1.15rem;
   text-align: left;
 }
 
-.form-group input{
+.form-group input {
   height: 2.1rem;
   font-size: 1.15rem;
   width: 95%;
@@ -72,12 +72,12 @@ html{
   margin-bottom: 0.4rem;
 }
 
-.error{
+.error {
   color: red;
   font-size: 0.8rem;
 }
 
-.login-button{
+.login-button {
   background-color: #14ae5c;
   color: white;
   padding: 0.9rem 1.2rem;
@@ -89,20 +89,20 @@ html{
   transition: opacity 0.3;
 }
 
-.login-button:hover{
+.login-button:hover {
   opacity: 0.9;
 }
 
-.login-button:active{
+.login-button:active {
   opacity: 0.75;
 }
 
-.forgot-password{
+.forgot-password {
   font-size: 1.05rem;
   margin-top: 0.9rem;
 }
 
-.forgot-password a{
+.forgot-password a {
   color: #007bff;
   text-decoration: none;
 }

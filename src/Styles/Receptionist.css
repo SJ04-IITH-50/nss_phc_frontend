@@ -1,11 +1,11 @@
-.receptionist-container{
+.receptionist-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.title-flex{
+.title-flex {
   display: flex;
   margin-top: 2vh;
   font-size: 1.7rem;
@@ -16,7 +16,7 @@
   border-bottom: 0.1rem solid #14ae5c;
 }
 
-.form-flex{
+.form-flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,13 +24,13 @@
   padding: 2vh 0;
 }
 
-.form-title{
+.form-title {
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 2vh;
 }
 
-.add-patient-form{
+.add-patient-form {
   border: 0.1rem solid #14ae5c;
   border-radius: 0.5rem;
   width: 70vw;
@@ -39,11 +39,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.add-patient-form div{
+.add-patient-form div {
   margin-bottom: 1rem;
 }
 
-.add-patient-form label{
+.add-patient-form label {
   display: block;
   margin-bottom: 0.3rem;
   font-size: 1.05rem;
@@ -51,7 +51,7 @@
 }
 
 .add-patient-form input,
-.add-patient-form select{
+.add-patient-form select {
   height: 1.7rem;
   font-size: 0.95rem;
   width: 95%;
@@ -60,7 +60,7 @@
   border-radius: 0.4rem;
 }
 
-.add-patient-button{
+.add-patient-button {
   background-color: #14ae5c;
   color: white;
   padding: 0.9rem 1.2rem;
@@ -72,20 +72,20 @@
   transition: opacity 0.3s;
 }
 
-.add-patient-button:hover{
+.add-patient-button:hover {
   opacity: 0.9;
 }
 
-.add-patient-button:active{
+.add-patient-button:active {
   opacity: 0.75;
 }
 
-.success-message{
+.success-message {
   color: green;
   font-size: 1rem;
 }
 
-.error-message{
+.error-message {
   color: red;
   font-size: 1rem;
 }

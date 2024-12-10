@@ -96,7 +96,7 @@ const PatientPrescription = () => {
       {success && <p className="text-green-500">{success}</p>}
       {error && <p className="text-red-500">{error}</p>}
       <button
-        onClick={handleMarkMedicinesDone} 
+        onClick={handleMarkMedicinesDone}
         className="bg-blue-500 text-white px-4 py-2 mt-4 rounded hover:bg-blue-600"
       >
         Go to Home

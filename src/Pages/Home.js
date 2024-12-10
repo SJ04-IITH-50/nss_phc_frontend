@@ -19,11 +19,7 @@ const Home = () => {
     }
   };
 
-  return (
-    <div>
-      {renderContentBasedOnRole()}
-    </div>
-  );
+  return <div>{renderContentBasedOnRole()}</div>;
 };
 
 export default Home;

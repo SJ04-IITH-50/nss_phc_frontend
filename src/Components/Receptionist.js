@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../Styles/Receptionist.css';
+import "../Styles/Receptionist.css";
 import axios from "axios";
 
 const AddPatientForm = () => {
@@ -116,7 +116,9 @@ const AddPatientForm = () => {
                 required
               />
             </div>
-            <button type="submit" className="add-patient-button">Add Patient</button>
+            <button type="submit" className="add-patient-button">
+              Add Patient
+            </button>
           </form>
         </div>
       </div>

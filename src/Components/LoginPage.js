@@ -6,6 +6,7 @@ import "../Styles/LoginPage.css";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [hospitalId, setHospitalId] = useState("");
   const [errors, setErrors] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -13,17 +14,20 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const errors = {};
+    const currentErrors = {};
 
     if (!email) {
-      errors.email = "Email is required";
+      currentErrors.email = "Email is required";
     }
     if (!password) {
-      errors.password = "Password is required";
+      currentErrors.password = "Password is required";
+    }
+    if (!hospitalId) {
+      currentErrors.hospitalId = "Hospital ID is required";
     }
 
-    if (Object.keys(errors).length > 0) {
-      setErrors(errors);
+    if (Object.keys(currentErrors).length > 0) {
+      setErrors(currentErrors);
       return;
     }
 
@@ -36,18 +40,19 @@ const LoginPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, hospitalId }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
-        console.log("thye tken is ", data.token);
+        console.log("The token is ", data.token);
 
         setUser({
           name: data.user.name,
           role: data.user.role,
+          hospital_id: data.user.hospital_id,
         });
         navigate("/home");
       } else {
@@ -59,7 +64,9 @@ const LoginPage = () => {
 
     setEmail("");
     setPassword("");
+    setHospitalId("");
   };
+
   return (
     <div className="login-container">
       <div className="title-flex">
@@ -68,6 +75,20 @@ const LoginPage = () => {
 
       <div className="form-flex">
         <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <label htmlFor="hospitalId">Hospital ID</label>
+            <input
+              type="text"
+              id="hospitalId"
+              value={hospitalId}
+              placeholder="Hospital ID"
+              onChange={(e) => setHospitalId(e.target.value)}
+            />
+            {errors.hospitalId && (
+              <span className="error">{errors.hospitalId}</span>
+            )}
+          </div>
+
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -99,10 +120,6 @@ const LoginPage = () => {
           <button type="submit" className="login-button">
             Sign In
           </button>
-
-          <div className="forgot-password">
-            <a href="">Forgot password?</a>
-          </div>
         </form>
       </div>
 

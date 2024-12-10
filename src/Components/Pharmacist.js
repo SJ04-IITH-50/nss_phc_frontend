@@ -12,8 +12,6 @@ const Pharmacist = () => {
 
   useEffect(() => {
     const socket = io("http://localhost:8001");
-
-    // Listen for updated prescription events
     socket.on("updatedPrescription", (updatedPrescription) => {
       if (updatedPrescription.medicines_done) {
         setDonePrescriptions((prev) => [updatedPrescription, ...prev]);
@@ -87,9 +85,15 @@ const Pharmacist = () => {
                   onClick={() => handlePrescriptionClick(prescription.id)}
                 >
                   <h3 className="prescription-name">{prescription.name}</h3>
-                  <p className="prescription-details">Age: {prescription.age}</p>
-                  <p className="prescription-details">Gender: {prescription.gender}</p>
-                  <p className="prescription-details">OPID: {prescription.opid}</p>
+                  <p className="prescription-details">
+                    Age: {prescription.age}
+                  </p>
+                  <p className="prescription-details">
+                    Gender: {prescription.gender}
+                  </p>
+                  <p className="prescription-details">
+                    OPID: {prescription.opid}
+                  </p>
                   <p className="prescription-details">
                     Medicines: {prescription.medicines_prescribed}
                   </p>
@@ -101,14 +105,22 @@ const Pharmacist = () => {
           <h2 className="section-title">Medicines Done Patients</h2>
           <div className="prescriptions">
             {donePrescriptions.length === 0 ? (
-              <p className="message">No patients have completed their prescriptions yet.</p>
+              <p className="message">
+                No patients have completed their prescriptions yet.
+              </p>
             ) : (
               donePrescriptions.map((prescription, index) => (
                 <div key={index} className="prescription-card">
                   <h3 className="prescription-name">{prescription.name}</h3>
-                  <p className="prescription-details">Age: {prescription.age}</p>
-                  <p className="prescription-details">Gender: {prescription.gender}</p>
-                  <p className="prescription-details">OPID: {prescription.opid}</p>
+                  <p className="prescription-details">
+                    Age: {prescription.age}
+                  </p>
+                  <p className="prescription-details">
+                    Gender: {prescription.gender}
+                  </p>
+                  <p className="prescription-details">
+                    OPID: {prescription.opid}
+                  </p>
                   <p className="prescription-details">
                     Medicines: {prescription.medicines_prescribed}
                   </p>

@@ -1,11 +1,11 @@
-.doctor-container{
+.doctor-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.content-flex{
+.content-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,32 +14,32 @@
   flex: 1;
 }
 
-.welcome-title{
+.welcome-title {
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 5vh;
 }
 
-.patients-section{
+.patients-section {
   width: 80%;
 }
 
-.section-title{
+.section-title {
   font-size: 1.6rem;
   color: #333333;
   margin-bottom: 1rem;
 }
 
-.patients{
+.patients {
   margin-bottom: 2rem;
 }
 
-.message{
+.message {
   font-size: 1.1rem;
   margin-bottom: 7vh;
 }
 
-.patient-card{
+.patient-card {
   background-color: white;
   border: 0.1rem solid #14ae5c;
   border-radius: 0.5rem;
@@ -49,24 +49,24 @@
   margin-bottom: 1.3vh;
 }
 
-.patient-card:hover{
+.patient-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.patient-name{
+.patient-name {
   font-size: 1.25rem;
   font-weight: 600;
   color: #14ae5c;
   margin-bottom: 0.5rem;
 }
 
-.patient-details{
+.patient-details {
   font-size: 1rem;
   color: black;
   margin-bottom: 0.3rem;
 }
 
-.error-message{
+.error-message {
   color: red;
   font-size: 0.9rem;
   margin-bottom: 1rem;

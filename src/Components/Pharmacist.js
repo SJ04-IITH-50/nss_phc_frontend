@@ -11,7 +11,7 @@ const Pharmacist = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const socket = io("http://localhost:8001");
+    const socket = io("https://nss-phc-backend.onrender.com");
     socket.on("updatedPrescription", (updatedPrescription) => {
       if (updatedPrescription.medicines_done) {
         setDonePrescriptions((prev) => [updatedPrescription, ...prev]);
@@ -33,7 +33,7 @@ const Pharmacist = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:8001/api/pharmacist/view-prescriptions",
+          "https://nss-phc-backend.onrender.com/api/pharmacist/view-prescriptions",
           {
             headers: {
               Authorization: `${token}`,

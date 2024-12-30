@@ -28,7 +28,7 @@ const AddPatientForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8001/api/receptionist/add-patient",
+        "https://nss-phc-backend.onrender.com/api/receptionist/add-patient",
         formData,
         {
           headers: {

@@ -73,7 +73,7 @@ const Doctor = () => {
   };
 
   useEffect(() => {
-    const socket = io("http://localhost:8001");
+    const socket = io("https://nss-phc-backend.onrender.com");
 
     socket.on("newPatient", (newPatient) => {
       setPatients((prevPatients) => [newPatient, ...prevPatients]);

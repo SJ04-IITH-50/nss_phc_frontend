@@ -35,7 +35,7 @@ const LoginPage = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch("http://localhost:8001/api/user/login", {
+      const response = await fetch("https://nss-phc-backend.onrender.com/api/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -13,7 +13,7 @@ const PatientPrescription = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:8001/api/pharmacist/prescription/${id}/medicines`,
+          `https://nss-phc-backend.onrender.com/api/pharmacist/prescription/${id}/medicines`,
           {
             headers: {
               Authorization: ` ${token}`,
@@ -34,7 +34,7 @@ const PatientPrescription = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:8001/api/pharmacist/mark-medicines-done/${id}`,
+        `https://nss-phc-backend.onrender.com/api/pharmacist/mark-medicines-done/${id}`,
         {},
         {
           headers: {
@@ -54,7 +54,7 @@ const PatientPrescription = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        `http://localhost:8001/api/pharmacist/medicine/${medicineId}/done`,
+        `https://nss-phc-backend.onrender.com/api/pharmacist/medicine/${medicineId}/done`,
         { done: doneStatus },
         {
           headers: {

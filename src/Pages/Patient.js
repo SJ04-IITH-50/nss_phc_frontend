@@ -71,7 +71,7 @@ const PatientPage = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:8001/api/doctor/patient/${id}`,
+          `https://nss-phc-backend.onrender.com/api/doctor/patient/${id}`,
           {
             headers: {
               Authorization: `${token}`,

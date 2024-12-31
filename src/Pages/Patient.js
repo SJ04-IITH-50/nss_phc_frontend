@@ -45,7 +45,7 @@ const PatientPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:8001/api/doctor/patient/update/${id}`,
+        `https://nss-phc-backend.onrender.com/api/doctor/patient/update/${id}`,
         { complaint: finalComplaint, medicines },
         {
           headers: {
